@@ -1,0 +1,7 @@
+fastapi==0.115.0
+uvicorn==0.30.0
+redis==5.0.1
+rq==1.15.1
+minio==7.2.5
+psycopg2-binary==2.9.9
+pdfminer.six==20231228

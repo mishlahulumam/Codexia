@@ -1,0 +1,10 @@
+CREATE INDEX idx_folders_parent ON folders(parent_id);
+CREATE INDEX idx_docs_folder ON documents(folder_id);
+CREATE INDEX idx_docs_owner ON documents(owner_id);
+CREATE INDEX idx_docs_status ON documents(status);
+CREATE INDEX idx_doc_versions_doc ON document_versions(doc_id);
+CREATE INDEX idx_doc_versions_uploaded_by ON document_versions(uploaded_by);
+CREATE INDEX idx_doc_permissions_doc ON document_permissions(doc_id);
+CREATE INDEX idx_audit_user ON audit_logs(user_id);
+CREATE INDEX idx_audit_doc ON audit_logs(doc_id);
+CREATE INDEX idx_doc_index_vector ON document_index USING GIN (search_vector);
